@@ -1,0 +1,35 @@
+xampp/htdocs/curso  //dentro de la carpeta curso cmd
+
+composer create-project laravel/laravel api		//se crea proyecto
+
+//dentro de la carpeta curso cmd
+cd api
+code .
+
+//dentro de visual code en terminar
+dentro de api
+php artisan serve
+
+//crear base de datos
+http://localhost/phpmyadmin/
+
+//ejecutar migracion
+php artisan migrate
+
+//crear modelo (controller y Migration)
+php artisan make:model Marca -rm --api
+
+//ejecutar migracion que hicimos manual
+php artisan migrate
+
+//se crea ruta en web.php (dentro de carpeta routes)
+http://127.0.0.1:8000/api/marcas
+
+//se crean 2 modelos
+Medidas
+php artisan make:model Medida -rm --api
+categorias
+php artisan make:model Categoria -rm --api
+
+//para ver las rutas que se han creado manualmente   (post,get, put, delete)
+php artisan route:list
